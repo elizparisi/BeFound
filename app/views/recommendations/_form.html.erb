@@ -1,20 +1,24 @@
-<% form_for :recommendation do |f| %>
-  <%= f.label :name %>Name:
+<%= form_for @recommendation do |f| %>
+  <%= f.label :name %>
   <%= f.text_field :name %>
+  <br>
   <br>
 
   <%= f.label :image_url %>
   <%= f.text_field :image_url %>
   <br>
+  <br>
 
   <%= f.label :location %>
   <%= f.text_field :location %>
+  <br>
   <br>
 
   <%= f.label :description %>
   <%= f.text_area :description %>
   <br>
+  <br>
 
-  <%= f.submit "Create!" %>
+  <%= f.submit "Submit your Recommendation!" %>
 
 <% end %>

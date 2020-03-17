@@ -6,5 +6,15 @@ class RecommendationsController < ApplicationController
 
   def new
     @recommendation = Recommendation.new
-  end 
+  end
+
+  def show
+
+  end
+
+  private
+
+  def recommendation_params
+    params.require(:recommendation).permit(:name, :image_url, :location, :description)
+  end
 end
