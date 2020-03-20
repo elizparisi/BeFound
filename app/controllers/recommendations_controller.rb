@@ -10,10 +10,11 @@ class RecommendationsController < ApplicationController
 
   def show
     @recommendation = Recommendation.find(params[:id])
-  end 
+  end
 
   def create
     @recommendation = Recommendation.create(recommendation_params)
+    @recommendation.user_id = current_user.id
 
     if @recommendation.save
       redirect_to recommendation_path(@recommendation)
