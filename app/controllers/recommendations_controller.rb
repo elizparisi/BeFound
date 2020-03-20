@@ -9,8 +9,19 @@ class RecommendationsController < ApplicationController
   end
 
   def show
+    @recommendation = Recommendation.find(params[:id])
+  end 
 
+  def create
+    @recommendation = Recommendation.create(recommendation_params)
+
+    if @recommendation.save
+      redirect_to recommendation_path(@recommendation)
+    else
+      render :new
+    end
   end
+
 
   private
 
