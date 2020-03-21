@@ -1,8 +1,8 @@
-<h2>View</h2>
-<% @recommendations.each do |recommendation| %>
-  <%= recommendation.image_url %>
-  <h3><%= recommendation.name %></h3>
-  <p><%= recommendation.location %></p>
-  <p><%= recommendation.description %></p>
-  <%= link_to "Learn more", recommendation_path(recommendation) %>
-<% end %>
+<h2>Hey, <%= current_user.username %>, nice recommendation!</h2>
+<p>Make your edits by hitting the link below.</p>
+
+<%= @recommendation.image_url %>
+<h3><%= @recommendation.name %></h3>
+<p><%= @recommendation.location %></p>
+<p><%= @recommendation.description %></p>
+<%= link_to "Make Changes", edit_recommendation_path(@recommendation) %>
