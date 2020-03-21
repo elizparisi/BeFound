@@ -1,1 +1,9 @@
 <h1>All Recommendations<h1>
+
+  <% @recommendations.each do |recommendation| %>
+    <%= recommendation.image_url %>
+    <h3><%= recommendation.name %></h3>
+    <p><%= recommendation.location %></p>
+    <p><%= recommendation.description %></p>
+    <%= link_to "Learn more", recommendation_path(recommendation) %>
+  <% end %>
