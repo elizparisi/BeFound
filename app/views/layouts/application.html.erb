@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
   <head>
     <title>BeFound</title>
     <%= csrf_meta_tags %>
@@ -11,12 +16,28 @@
 
   <body>
     <div class="container">
-      <% if user_signed_in? %>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete %> |
-      <% else %>
-        <%= link_to "Sign up", new_user_registration_path %> |
-        <%= link_to "Login", new_user_session_path %>
-      <% end %>
+      <nav class="menum navbar navbar-light navbar-expand-md justify-content-center fixed-top">
+        <div class="container">
+
+        <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+          <ul class="topBotomBordersOut navbar-nav mx-auto text-center">
+            <li class="nav-item active">
+              <%= link_to "Home", root_path %>
+            </li>
+            <li class="nav-item">
+              <% if user_signed_in? %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete %> |
+            </li>
+              <% else %>
+            <li class="nav-item"> <%= link_to "Sign up", new_user_registration_path %> </li>
+            <li class="nav-item"> <%= link_to "Login", new_user_session_path %>
+            <li class="nav-item"> <%= link_to "Recommendations", recommendations_path %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </nav>
    </div>
 
     <p class="notice"><%= notice %></p>
