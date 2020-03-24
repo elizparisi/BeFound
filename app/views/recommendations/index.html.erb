@@ -1,9 +1,14 @@
 <h1>All Recommendations<h1>
 
+<div class="card" style="width: 18rem;">
   <% @recommendations.each do |recommendation| %>
-    <%= recommendation.image_url %>
-    <h3><%= recommendation.name %></h3>
-    <p><%= recommendation.location %></p>
-    <p><%= recommendation.description %></p>
-    <%= link_to "Learn more", recommendation_path(recommendation) %>
+    <img src="..." class="card-img-top" alt="..."><%= recommendation.image_url %>
+    <div class="card-body">
+      <h5 class="card-title"><%= recommendation.name %></h5>
+      <h6 class="card-location"><%= recommendation.location %></h6>
+      <p class="card-text"><%= recommendation.description %></p>
+    </div>
+    <div class="card-body">
+      <%= link_to "Learn more", recommendation_path(recommendation) %>
   <% end %>
+    </div>
