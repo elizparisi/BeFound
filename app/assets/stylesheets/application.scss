@@ -16,13 +16,13 @@
  @import url(http://fonts.googleapis.com/css?family=Raleway);
  body{
 
-     background-color:#ff666f;
+     background-color:#05262e;
 
  }
 
  a{
 
-     color:#fff !important;
+     color:#B58900 !important;
 
  }
  .nav-item {
@@ -32,7 +32,7 @@
      text-align: center;
  }
  .nav-item a {
-     color: #FFF;
+     color: #B58900;
      text-decoration: none;
      font: 20px Century Gothic;
      margin: 0px 10px;
@@ -53,8 +53,4 @@
      opacity: 0;
      -webkit-transition: all 0.3s;
      transition: all 0.3s;
- }
-
- .home h1 {
-    text-align: center;
  }
