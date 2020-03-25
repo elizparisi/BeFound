@@ -1,8 +1,9 @@
 <h2>Hey, <%= current_user.email %>, nice recommendation!</h2>
 <p>Make your edits by hitting the link below.</p>
 
-<%= @recommendation.image_url %>
+<%= image_tag(@recommendation.image, style:'width: 100%') %>
 <h3><%= @recommendation.name %></h3>
 <p><%= @recommendation.location %></p>
 <p><%= @recommendation.description %></p>
-<%= link_to "Make Changes", edit_recommendation_path(@recommendation) %>
+<%= link_to "Edit", edit_recommendation_path(@recommendation) %>
+<%= link_to "Back", recommendations_path %>
