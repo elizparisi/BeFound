@@ -33,10 +33,15 @@ class RecommendationsController < ApplicationController
     redirect_to recommendation_path(@recommendation)
   end
 
+  def destroy
+    @recommendation.destroy
+    redirect_to recommendations_path
+  end
+
 
   private
 
   def recommendation_params
-    params.require(:recommendation).permit(:name, :image_url, :location, :description)
+    params.require(:recommendation).permit(:name, :image, :location, :description)
   end
 end
