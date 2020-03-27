@@ -4,6 +4,9 @@
 
 .card {
   background: #073642;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   border-top-left-radius: 2px;
