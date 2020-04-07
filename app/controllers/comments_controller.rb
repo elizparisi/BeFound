@@ -9,5 +9,11 @@ class CommentsController < ApplicationController
   end
 
   def show
-  end  
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:title, :content, :recommendation_id)
+  end
 end
